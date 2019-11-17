@@ -1,4 +1,3 @@
 node_modules
 .DS_store
 dev.js
-prod.js
