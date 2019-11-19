@@ -2,6 +2,7 @@
 
 const express = require('express');
 const mongoose = require('mongoose');
+const passport = require('passport');
 const keys = require('./config/keys');
 
 mongoose.connect(keys.mongoURI, () => {
@@ -9,6 +10,12 @@ mongoose.connect(keys.mongoURI, () => {
 });
 
 const app = express();
+
+// Middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+require('./routes/authRoutes')(app);
 
 app.get('/', (req, res) => res.send('Howdy'));
 
