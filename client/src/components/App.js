@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Header, Footer } from './global';
 import { BrowserRouter, Route } from 'react-router-dom';
+import { Home, Dashboard } from './pages';
 class App extends Component {
     render() {
         return (
