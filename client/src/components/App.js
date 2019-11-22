@@ -4,10 +4,15 @@ import { BrowserRouter, Route } from 'react-router-dom';
 class App extends Component {
     render() {
         return (
-            <div>
-                <Header />
-                <h1>Howdy</h1>
-                <Footer />
+            <div className="container">
+                <BrowserRouter>
+                    <div className="container">
+                        <Header />
+                        <Route path="/" exact component={Home} />
+                        <Route path="/dashboard" exact component={Dashboard} />
+                        <Footer />
+                    </div>
+                </BrowserRouter>
             </div>
         );
     }
