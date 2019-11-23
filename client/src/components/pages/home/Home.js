@@ -5,7 +5,7 @@ class Home extends Component {
         console.log(this.props);
         return (
             <div>
-                <h1>Are we logged in?</h1>
+                <h1>Home</h1>
             </div>
         );
     }
