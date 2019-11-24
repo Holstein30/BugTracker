@@ -3,12 +3,11 @@ import { Header, Footer } from './global';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Home, Dashboard } from './pages';
 class App extends Component {
-    componentDidMount() {
-        console.log(
-            fetch('api/current_user', {
-                credentials: 'include'
-            })
-        );
+    async componentDidMount() {
+        const userData = await fetch('/api/current_user', {
+            credentials: 'include'
+        });
+        console.log(userData);
     }
     render() {
         return (
